@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
+import Appbar from './components/AppBar';
+import { createTheme } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/styles';
+import { lightGreen, deepOrange } from '@material-ui/core/colors';
+
 import './App.css';
 
 function App() {
+  const theme = createTheme({
+    palette:{
+      primary: lightGreen,
+      secondary: deepOrange
+    }
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Appbar />
+      </div>
+    </ThemeProvider>
   );
 }
 
