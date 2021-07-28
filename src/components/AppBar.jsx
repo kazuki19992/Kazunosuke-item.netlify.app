@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core'
-import { AppBar, Toolbar, IconButton } from '@material-ui/core'
+import { AppBar, Toolbar } from '@material-ui/core'
 import { Typography } from '@material-ui/core'
 import { Button } from '@material-ui/core'
 
@@ -23,12 +23,12 @@ export default function Appbar (props) {
   const classes = useStyles();
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{color: '#234915'}}>
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
           あいてむカズ之助
         </Typography>
-        <Button color="inherit">Login</Button>
+        <a href="https://twitter.com/Tech_Kazu" target="_blank" style={{textDecoration: 'none', color: 'inherit'}}><Button color="inherit" variant="outlined">カズ之助のTwitterにいく</Button></a>
       </Toolbar>
     </AppBar>
   )
