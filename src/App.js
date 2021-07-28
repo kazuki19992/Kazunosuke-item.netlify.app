@@ -3,7 +3,8 @@ import Appbar from './components/AppBar';
 import { createTheme } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
 import { lightGreen, deepOrange } from '@material-ui/core/colors';
-
+import { Container } from '@material-ui/core';
+import ItemPage from './pages/Item';
 
 import './App.css';
 
@@ -19,6 +20,9 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <Appbar />
+        <Container>
+          <ItemPage />
+        </Container>
       </div>
     </ThemeProvider>
   );
