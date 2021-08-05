@@ -5,6 +5,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import { lightGreen, deepOrange } from '@material-ui/core/colors';
 import { Container } from '@material-ui/core';
 import ItemPage from './pages/Item';
+import AboutPage from './pages/About';
 
 import './App.css';
 
@@ -21,7 +22,8 @@ function App() {
       <div className="App">
         <Appbar />
         <Container>
-          <ItemPage />
+          {/* <ItemPage /> */}
+          <AboutPage />
         </Container>
       </div>
     </ThemeProvider>
