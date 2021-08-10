@@ -14,7 +14,7 @@
     "price": "商品の値段",
     "ship": "配送方法(0: ヤマト, 1: ゆうパック, 2: レターパック)",
     "size": "サイズ",
-    "status": "0: 販売中, 1: 商談中, 2: 売り切れ",
+    "status": "0: 販売中, 1: 商談中, 2: 売り切れ, 3: 販売停止",
     "state": "0: わるい, 1: 使える, 2: 普通, 3: よい, 4: まるで新品"
   },
   "datas":{
@@ -27,7 +27,7 @@
       "price": 3000,
       "ship": 0,
       "size": 120,
-      "status": 0,
+      "status": 3,
       "state": 3
     },
     "raspberrypi":{
@@ -39,7 +39,7 @@
       "price": 3000,
       "ship": 0,
       "size": 120,
-      "status": 0,
+      "status": 3,
       "state": 3
     },
     "penTablet":{
@@ -51,7 +51,7 @@
       "price": 4000,
       "ship": 0,
       "size": 120,
-      "status": 0,
+      "status": 3,
       "state": 3
     },
     "videoCam":{
@@ -63,7 +63,7 @@
       "price": 4000,
       "ship": 0,
       "size": 120,
-      "status": 0,
+      "status": 3,
       "state": 4
     }
   }
