@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -22,6 +23,8 @@ const useStyles = makeStyles({
 export default function MediaCard(props) {
   const classes = useStyles();
   const status = props.data.status
+
+  const linkTo = '/Item/' + props.data.id
   console.log(props.data)
 
   // バッジ描画用
@@ -70,27 +73,29 @@ export default function MediaCard(props) {
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={img}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {props.data.title}
-          </Typography>
-          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-            <Typography variant="body2" color="textSecondary" component="p">
-              値段: {props.data.price}円
+      <Link to={linkTo} style={{textDecoration: 'none', color: '#333333'}}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image={img}
+            title="Contemplative Reptile"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2" style={{}}>
+              {props.data.title}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              状態: {getState(props.data.state)}
-            </Typography>
-            {renderStatus(status)}
-          </div>
-        </CardContent>
-      </CardActionArea>
+            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+              <Typography variant="body2" color="textSecondary" component="p">
+                値段: {props.data.price}円
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                状態: {getState(props.data.state)}
+              </Typography>
+              {renderStatus(status)}
+            </div>
+          </CardContent>
+        </CardActionArea>
+      </Link>
       <CardActions>
         <Button size="small" style={{color: "#378f24"}}>
           共有

@@ -25,7 +25,7 @@ function App() {
         <div className="App">
           <Appbar />
           <Container>
-            <Route path="/" component={Top} />
+            <Route path="/" exact component={Top} />
             <Route path="/Item/:id" component={ItemPage} />
             <Route path="/About" component={AboutPage} />
           </Container>

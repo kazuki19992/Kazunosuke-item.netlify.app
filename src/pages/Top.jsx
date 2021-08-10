@@ -3,6 +3,7 @@ import ItemCards from '../components/ItemCards'
 import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Top (props) {
 
@@ -19,8 +20,6 @@ export default function Top (props) {
       const cardsArray = []
       for(const key of Object.keys(datas)){
         console.log(datas[key])
-        const price = datas[key].price + '円'
-        const img = process.env.PUBLIC_URL + '/static/img/' + datas[key].image[0]
 
         cardsArray.push(<ItemCards data={datas[key]} />)
       }
