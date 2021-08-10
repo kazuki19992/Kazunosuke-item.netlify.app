@@ -65,6 +65,18 @@
       "size": 120,
       "status": 3,
       "state": 4
+    },
+    "bangDreamCd":{
+      "id": "bangDreamCd",
+      "title": "バンドリCD 9枚 + ケース",
+      "detail": "バンドリのCD(9枚)とアニメイト特典のケースです。いろいろあります。AppleMusicに入ってからCD買わなくなったなぁ…",
+      "image": ["bangDreamCD1.JPG"],
+      "legend": ["バンドリのCDです。"],
+      "price": 6000,
+      "ship": 0,
+      "size": 120,
+      "status": 3,
+      "state": 4
     }
   }
 }
