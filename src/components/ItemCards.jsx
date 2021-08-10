@@ -29,7 +29,7 @@ export default function MediaCard(props) {
 
   // バッジ描画用
   const renderStatus = (status) => {
-    const statusList = ["販売中", "商談中", "売り切れ！"]
+    const statusList = ["販売中", "商談中", "売り切れ！", "販売停止中"]
     const badgeStyle = {
       display: 'flex',
       justifyContent: 'center',
@@ -51,6 +51,10 @@ export default function MediaCard(props) {
       color: '#850200',
       backgroundColor: '#ffb9b8',
       border: '1px solid #ad1717'
+    },{
+      color: '#383838',
+      backgroundColor: '#c7c7c7',
+      border: '1px solid #5c5c5c'
     }]
 
     return (
@@ -63,7 +67,7 @@ export default function MediaCard(props) {
   const getState = (state) => {
     // 状態を返す
     const statusList = [
-      "悪い", "使える", "普通", "良い", "まるで新品"
+      "悪い", "使える", "普通", "良い", "新品同然"
     ]
     return statusList[state]
   }
