@@ -6,6 +6,7 @@ import { lightGreen, deepOrange } from '@material-ui/core/colors';
 import { Container } from '@material-ui/core';
 import ItemPage from './pages/Item';
 import AboutPage from './pages/About';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import './App.css';
 
@@ -18,15 +19,17 @@ function App() {
     }
   })
   return (
-    <ThemeProvider theme={theme}>
-      <div className="App">
-        <Appbar />
-        <Container>
-          {/* <ItemPage /> */}
-          <AboutPage />
-        </Container>
-      </div>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <div className="App">
+          <Appbar />
+          <Container>
+            <Route path="/Item/:id" component={ItemPage} />
+            <Route path="/About" component={AboutPage} />
+          </Container>
+        </div>
+      </ThemeProvider>
+    </Router>
   );
 }
 
