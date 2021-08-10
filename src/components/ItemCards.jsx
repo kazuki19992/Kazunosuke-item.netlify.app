@@ -8,6 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
+const helperFunctions = require('../helpers/helpers')
 
 const useStyles = makeStyles({
   root: {
@@ -93,9 +94,9 @@ export default function MediaCard(props) {
                 値段: {props.data.price}円
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                状態: {getState(props.data.state)}
+                状態: {helperFunctions.getState(props.data.state)}
               </Typography>
-              {renderStatus(status)}
+              {helperFunctions.renderStatus(status)}
             </div>
           </CardContent>
         </CardActionArea>
