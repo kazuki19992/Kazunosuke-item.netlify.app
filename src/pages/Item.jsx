@@ -29,7 +29,7 @@ export default function ItemPage (props) {
     axios.get(process.env.PUBLIC_URL + '/static/itemList.json').then((res) => {
       const datas = res.data.datas[id]
       updateData(datas)
-      console.log(datas.image)
+      document.title = datas.title + ' - あいてむカズ之助'
 
       const carouselList = []
       for(let i = 0; i < datas.image.length; i++){
