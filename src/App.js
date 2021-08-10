@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+import React from 'react';
+import Appbar from './components/AppBar';
+import { createTheme } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/styles';
+import { lightGreen, deepOrange } from '@material-ui/core/colors';
+import { Container } from '@material-ui/core';
+import ItemPage from './pages/Item';
+import AboutPage from './pages/About';
+import Top from './pages/Top';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 import './App.css';
 
 function App() {
+
+  const theme = createTheme({
+    palette:{
+      primary: lightGreen,
+      secondary: deepOrange
+    }
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <div className="App">
+          <Appbar />
+          <Container>
+            <Route path="/" exact component={Top} />
+            <Route path="/Item/:id" component={ItemPage} />
+            <Route path="/About" component={AboutPage} />
+          </Container>
+        </div>
+      </ThemeProvider>
+    </Router>
   );
 }
 
