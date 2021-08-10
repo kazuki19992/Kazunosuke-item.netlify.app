@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core'
 import { AppBar, Toolbar } from '@material-ui/core'
 import { Typography } from '@material-ui/core'
 import { Button } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,9 +27,11 @@ export default function Appbar (props) {
     <AppBar position="static" style={{color: '#234915'}}>
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
-          あいてむカズ之助
+          <Link to='/' style={{textDecoration: 'none', color: 'inherit'}}>
+            あいてむカズ之助
+          </Link>
         </Typography>
-        <a href="https://twitter.com/Tech_Kazu" target="_blank" style={{textDecoration: 'none', color: 'inherit'}}><Button color="inherit" variant="outlined">カズ之助のTwitterにいく</Button></a>
+        <a href="https://twitter.com/Tech_Kazu" target="_blank" style={{textDecoration: 'none', color: 'inherit', display: 'block'}}><Button color="inherit" variant="outlined">カズ之助のTwitterにいく</Button></a>
       </Toolbar>
     </AppBar>
   )

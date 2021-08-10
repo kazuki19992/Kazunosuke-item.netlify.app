@@ -2,11 +2,13 @@ import React from 'react'
 import { Card } from '@material-ui/core'
 import { CardContent } from '@material-ui/core'
 import { CardHeader } from '@material-ui/core'
+const helperFunctions = require('../helpers/helpers')
 
 export default function Price (props) {
   const datas = props.datas
 
-  const shipInfo = datas.ships === "レターパック" ? "送料は代金に含まれています": "送料: 着払い(福島県郡山市から)"
+  const shipInfo = helperFunctions.shipService(datas.ship) === "レターパック" ? "送料は無料です": "送料: 着払い(福島県郡山市から)"
+  const shipService = helperFunctions.shipService(datas.ship) !== "レターパック" ? helperFunctions.shipService(datas.ship) + `(${datas.size})` : "レターパック"
   console.log(datas)
 
   const hrStyle = {
@@ -53,7 +55,7 @@ export default function Price (props) {
               カズ之助希望価格
             </p>
             <p style={{fontSize: '36pt', fontWeight: 'bold', margin: 0, padding: 0}} >
-              {datas.price}
+              {datas.price}円
             </p>
           </div>
           <div style={{display: 'flex', justifyContent: 'space-around'}}>
@@ -61,7 +63,7 @@ export default function Price (props) {
           <hr style={hrStyle} />
           <div style={wrapperStyle} >
             <p style={{margin: 0, padding: 0}}>
-              配送方法(サイズ): {datas.ships}
+              配送方法(サイズ): {shipService}
             </p>
             <p style={{margin: 0, padding: 0}}>
               {shipInfo}
@@ -70,7 +72,7 @@ export default function Price (props) {
           <hr style={hrStyle} />
           <div style={wrapperStyle} >
             <p style={{margin: 0, padding: 0}}>
-              状態: {datas.state}
+              状態: {helperFunctions.getState(datas.state)}
             </p>
             <p style={{margin: 0, padding: 0}}>
               値下げ: TwitterのDMで交渉受付中
