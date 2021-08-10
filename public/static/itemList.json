@@ -1,0 +1,70 @@
+{
+  "example":{
+    "id": "商品のID",
+    "title": "商品のタイトル",
+    "detail": "商品の詳細 '\n'で改行",
+    "image": [
+      "写真のURL",
+      "写真のURL"
+    ],
+    "legend": [
+      "写真の説明1",
+      "写真の説明2"
+    ],
+    "price": "商品の値段",
+    "ship": "配送方法(0: ヤマト, 1: ゆうパック, 2: レターパック)",
+    "size": "サイズ",
+    "status": "0: 販売中, 1: 商談中, 2: 売り切れ",
+    "state": "0: わるい, 1: 使える, 2: 普通, 3: よい, 4: まるで新品"
+  },
+  "datas":{
+    "googlenest":{
+      "id": "googlenest",
+      "title": "Google Nest Mini",
+      "detail": "Google Nest Miniです。あまり使ってないのできれいです。我が家にはアレクサがいるからね。\n箱付き電源ケーブル付き説明書付きのフルセットです。",
+      "image": ["googleNest1.JPG"],
+      "legend": ["あまり使ってなかったのできれいです。"],
+      "price": 3000,
+      "ship": 0,
+      "size": 120,
+      "status": 0,
+      "state": 3
+    },
+    "raspberrypi":{
+      "id": "raspberrypi",
+      "title": "ラズパイ3 model-B",
+      "detail": "ラズパイ3のモデルBです。ちょっと古いですがまだまだ現役バリバリで動きます。\n電気代も安いのでIoT入門や格安サーバーとして使ってみるのもいいと思います。\n箱と説明書と本体がついてきます。",
+      "image": ["rasp1.JPG", "rasp2.JPG"],
+      "legend": ["フルセットです。(SDカードはついてきません)", "おなじみのラズパイ3。IoT入門にいかがでしょう"],
+      "price": 3000,
+      "ship": 0,
+      "size": 120,
+      "status": 0,
+      "state": 3
+    },
+    "penTablet":{
+      "id": "penTablet",
+      "title": "wacom ペンタブ",
+      "detail": "wacomのペンタブです。もちろんフルセット。あまり使ってなかったのできれいです。\nクリスタ(お絵かきソフト)はありません。ごめんね。",
+      "image": ["tablet1.JPG", "tablet2.JPG"],
+      "legend": ["wacomの板タブです。", "中身はちゃんとシュリンクに包んでお届けします。"],
+      "price": 4000,
+      "ship": 0,
+      "size": 120,
+      "status": 0,
+      "state": 3
+    },
+    "videoCam":{
+      "id": "videoCam",
+      "title": "Panasonic ビデオカメラ",
+      "detail": "パナソニックのビデオカメラです。\n16GBの内蔵メモリがあります。\n使おうと思って購入したものの一回も実戦投入されませんでした。\nフルセットです。90倍ズームできます。すごい。",
+      "image": ["cam1.JPG", "cam2.JPG"],
+      "legend": ["パナのカメラです。", "中身はちゃんとシュリンクに包んでお届けします。"],
+      "price": 4000,
+      "ship": 0,
+      "size": 120,
+      "status": 0,
+      "state": 4
+    }
+  }
+}
