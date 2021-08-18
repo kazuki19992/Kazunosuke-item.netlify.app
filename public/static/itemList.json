@@ -26,21 +26,21 @@
       "legend": ["あまり使ってなかったのできれいです。"],
       "price": 3000,
       "ship": 0,
-      "size": 120,
-      "status": 3,
-      "state": 3
+      "size": 60,
+      "status": 0,
+      "state": 4
     },
     "raspberrypi":{
       "id": "raspberrypi",
       "title": "ラズパイ3 model-B",
       "detail": "ラズパイ3のモデルBです。ちょっと古いですがまだまだ現役バリバリで動きます。\n電気代も安いのでIoT入門や格安サーバーとして使ってみるのもいいと思います。\n箱と説明書と本体がついてきます。",
       "image": ["rasp1.JPG", "rasp2.JPG"],
-      "legend": ["フルセットです。(SDカードはついてきません)", "おなじみのラズパイ3。IoT入門にいかがでしょう"],
+      "legend": ["フルセット(本体+箱)です。(SDカードはついてきません)", "おなじみのラズパイ3。IoT入門にいかがでしょう"],
       "price": 3000,
       "ship": 0,
-      "size": 120,
-      "status": 3,
-      "state": 3
+      "size": 60,
+      "status": 0,
+      "state": 4
     },
     "penTablet":{
       "id": "penTablet",
@@ -50,8 +50,8 @@
       "legend": ["wacomの板タブです。", "中身はちゃんとシュリンクに包んでお届けします。"],
       "price": 4000,
       "ship": 0,
-      "size": 120,
-      "status": 3,
+      "size": 80,
+      "status": 0,
       "state": 3
     },
     "videoCam":{
@@ -63,8 +63,8 @@
       "price": 4000,
       "ship": 0,
       "size": 120,
-      "status": 3,
-      "state": 4
+      "status": 0,
+      "state": 3
     },
     "bangDreamCd":{
       "id": "bangDreamCd",
@@ -75,8 +75,8 @@
       "price": 6000,
       "ship": 0,
       "size": 120,
-      "status": 3,
-      "state": 4
+      "status": 0,
+      "state": 3
     }
   }
 }

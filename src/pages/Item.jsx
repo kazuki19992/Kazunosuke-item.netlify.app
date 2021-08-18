@@ -61,7 +61,7 @@ export default function ItemPage (props) {
         <div style={{display: 'flex', justifyContent: 'space-between'}}>
 
           {/* カルーセル */}
-          <div style={{maxWidth: '600px', maxHeight: '300px', width: '50%'}}>
+          <div style={{maxWidth: '600px', maxHeight: '300px', width: '50%', marginRight: 5}}>
             <Carousel>
               {carousel}
             </Carousel>

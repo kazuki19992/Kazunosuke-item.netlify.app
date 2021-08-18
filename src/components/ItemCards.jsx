@@ -8,6 +8,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Snackbar } from '@material-ui/core';
 const helperFunctions = require('../helpers/helpers')
 
 const useStyles = makeStyles({
@@ -25,58 +27,35 @@ export default function MediaCard(props) {
   const classes = useStyles();
   const status = props.data.status
 
+  const [noticeOpen, setOpen] = useState(false)
+
   const linkTo = '/Item/' + props.data.id
-  console.log(props.data)
+  console.log(noticeOpen)
 
-  // バッジ描画用
-  const renderStatus = (status) => {
-    const statusList = ["販売中", "商談中", "売り切れ！", "販売停止中"]
-    const badgeStyle = {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItem: 'center',
-      fontSize: '10pt',
-      fontWeight: 'bold',
-      padding: '1px 5px',
-      borderRadius: 3
-    }
-    const badgeDiffStyle = [{
-      color: '#0c4f15',
-      backgroundColor: '#bbebb0',
-      border: '1px solid #279135'
-    },{
-      color: '#b85f00',
-      backgroundColor: '#fadc57',
-      border: '1px solid #ad962d'
-    },{
-      color: '#850200',
-      backgroundColor: '#ffb9b8',
-      border: '1px solid #ad1717'
-    },{
-      color: '#383838',
-      backgroundColor: '#c7c7c7',
-      border: '1px solid #5c5c5c'
-    }]
-
-    return (
-      <div style={{ ...badgeStyle, ...badgeDiffStyle[status]}}>
-        <span>{statusList[status]}</span>
-      </div>
-    )
-  }
-
-  const getState = (state) => {
-    // 状態を返す
-    const statusList = [
-      "悪い", "使える", "普通", "良い", "新品同然"
-    ]
-    return statusList[state]
+  const handleClick = () => {
+    setOpen(true)
+    window.setTimeout(()=>{
+      setOpen(false)
+    }, 3000)
   }
 
   const img = process.env.PUBLIC_URL + '/static/img/' + props.data.image[0]
   console.log(img)
 
+  const twitterText = props.data.title + ' - あいてむカズ之助 ' + window.location.href + 'Item/' + props.data.id
+  const textURL = encodeURI('https://twitter.com/intent/tweet?text=' + twitterText)
+
+  const [toastMsg, setMsg] = useState(null)
+  async function copyUrl () {
+    const url = window.location.href + 'Item/' + props.data.id
+    const ret = await helperFunctions.copyTextToClipboard(url)
+    console.log(ret)
+    setMsg('商品URLをコピーしました！')
+    handleClick()
+  }
+
   return (
+    <>
     <Card className={classes.root}>
       <Link to={linkTo} style={{textDecoration: 'none', color: '#333333'}}>
         <CardActionArea>
@@ -102,13 +81,23 @@ export default function MediaCard(props) {
         </CardActionArea>
       </Link>
       <CardActions>
-        <Button size="small" style={{color: "#378f24"}}>
+        <Button size="small" style={{color: "#378f24"}} href={textURL} target='_brank'>
           共有
         </Button>
-        <Button size="small" style={{color: "#378f24"}}>
-          商品IDをコピー
+        <Button size="small" style={{color: "#378f24"}} onClick={copyUrl}>
+          商品URLをコピー
         </Button>
       </CardActions>
     </Card>
+    <Snackbar
+      anchorOrigin={{
+        vertical: 'bottom',
+        horizontal: 'left',
+      }}
+      open={noticeOpen}
+      autoHideDuration={6000}
+      message={toastMsg}
+    />
+    </>
   );
 }
