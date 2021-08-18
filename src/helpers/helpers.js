@@ -47,3 +47,14 @@ export function shipService (ships) {
   const service = ['ヤマト運輸', 'ゆうパック', 'レターパック']
   return service[ships]
 }
+
+export function copyTextToClipboard(text) {
+  navigator.clipboard.writeText(text)
+  .then(function() {
+    console.log('Async: Copying to clipboard was successful!', text);
+    return true
+  }, function(err) {
+    console.error('Async: Could not copy text: ', err);
+    return false
+  });
+}
