@@ -31,7 +31,7 @@ export default function Top (props) {
       <h2 style={{padding: '0 1rem', borderLeft: '4px solid #ff9800', margin: '20px 0'}}>商品一覧</h2>
 
       {/* 注意書き */}
-      <p>まだ買えません。こんなのがあるよって感じです。値段はまだ仮なのでこれから変わります。</p>
+      {/* <p>まだ買えません。こんなのがあるよって感じです。値段はまだ仮なのでこれから変わります。</p> */}
 
       <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', flexWrap: 'wrap', alignContent: 'space-between'}}>
         {/* 商品カード */}

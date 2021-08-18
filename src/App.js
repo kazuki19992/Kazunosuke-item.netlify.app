@@ -7,6 +7,7 @@ import { Container } from '@material-ui/core';
 import ItemPage from './pages/Item';
 import AboutPage from './pages/About';
 import Top from './pages/Top';
+import Footer from './components/Footer'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import './App.css';
@@ -29,6 +30,7 @@ function App() {
             <Route path="/Item/:id" component={ItemPage} />
             <Route path="/About" component={AboutPage} />
           </Container>
+          <Footer />
         </div>
       </ThemeProvider>
     </Router>
