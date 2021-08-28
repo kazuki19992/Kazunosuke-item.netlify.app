@@ -106,7 +106,7 @@ export default function Price (props) {
       </Card>
 
       {/* 購入方法 */}
-      <Card style={{marginTop: '10px'}} variant="outlined">
+      <Card style={{marginTop: '10px', marginBottom: '20px'}} variant="outlined">
         <CardHeader title='購入方法' />
         <CardContent style={{margin: 0}}>
           <p>TwitterのDMで商品ページのリンクと購入希望の旨をお伝え下さい……</p>

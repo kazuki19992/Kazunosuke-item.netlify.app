@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function Footer (props) {
 
   return (
-    <footer style={{marginTop: 20}}>
+    <footer style={{marginTop: 'auto'}}>
       <div style={{padding: '10px 20px', backgroundColor: '#8BC34A', boxShadow: '0 0 5px 0 #333'}}>
         <div className="contentsWrapper" style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
           <div>
