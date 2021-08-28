@@ -27,7 +27,7 @@
       "price": 3000,
       "ship": 0,
       "size": 60,
-      "status": 0,
+      "status": 1,
       "state": 4
     },
     "raspberrypi":{
@@ -51,7 +51,7 @@
       "price": 4000,
       "ship": 0,
       "size": 80,
-      "status": 0,
+      "status": 1,
       "state": 3
     },
     "videoCam":{
@@ -63,7 +63,7 @@
       "price": 4000,
       "ship": 0,
       "size": 120,
-      "status": 0,
+      "status": 1,
       "state": 3
     },
     "bangDreamCd":{
@@ -75,7 +75,7 @@
       "price": 6000,
       "ship": 0,
       "size": 120,
-      "status": 0,
+      "status": 1,
       "state": 3
     }
   }
